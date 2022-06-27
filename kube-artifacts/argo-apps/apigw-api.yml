@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: TENANT-animals-api
+spec:
+  destination:
+    name: 'TENANT'
+    namespace: TENANT
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ''
+    repoURL: 'https://alyibrahim.github.io/helm-repo'
+    targetRevision: 0.1.0
+    chart: animals-api
+    helm:
+      parameters:
+        - name: replicaCount
+          value: '2'
+        - name: apis[0].url
+          value: ANIMALS_API_URL
+        - name: authorizer.userPoolId
+          value: USER_POOL_ID
+        - name: authorizer.clientId
+          value: WEB_CLIENT_ID
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

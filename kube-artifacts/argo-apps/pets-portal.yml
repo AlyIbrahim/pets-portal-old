@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: TENANT-pets-portal
+spec:
+  destination:
+    name: 'TENANT'
+    namespace: TENANT
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ''
+    repoURL: 'https://alyibrahim.github.io/helm-repo'
+    targetRevision: 0.1.0
+    chart: pets-portal
+    helm:
+      parameters:
+        - name: replicaCount
+          value: '2'
+        - name: apis[0].host
+          value: ANIMALS_API_HOST
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
