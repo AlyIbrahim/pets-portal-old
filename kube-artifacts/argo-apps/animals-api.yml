@@ -16,6 +16,10 @@ spec:
       parameters:
         - name: replicaCount
           value: '2'
+        - name: db.dns
+          value: animals.cy10jvr7k0mv.us-east-1.rds.amazonaws.com
+        - name: db.dbName
+          value: pets
   project: default
   syncPolicy:
     automated:
