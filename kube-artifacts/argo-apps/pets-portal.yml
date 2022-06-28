@@ -18,6 +18,8 @@ spec:
           value: '2'
         - name: apis[0].host
           value: ANIMALS_API_HOST
+        - name: service.type
+          value: LoadBalancer
   project: default
   syncPolicy:
     automated:
