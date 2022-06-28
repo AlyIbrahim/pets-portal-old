@@ -4,7 +4,7 @@ metadata:
   name: TENANT-pets-portal
 spec:
   destination:
-    name: 'TENANT'
+    name: ''
     namespace: TENANT
     server: 'https://kubernetes.default.svc'
   source:

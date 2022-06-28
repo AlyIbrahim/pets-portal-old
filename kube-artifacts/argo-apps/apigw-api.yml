@@ -4,7 +4,7 @@ metadata:
   name: TENANT-animals-api
 spec:
   destination:
-    name: 'TENANT'
+    name: ''
     namespace: TENANT
     server: 'https://kubernetes.default.svc'
   source:
