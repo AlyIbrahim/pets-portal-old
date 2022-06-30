@@ -16,11 +16,11 @@ spec:
       parameters:
         - name: replicaCount
           value: '2'
-        - name: db.dns
+        - name: db.host
           value: animals.cy10jvr7k0mv.us-east-1.rds.amazonaws.com
         - name: db.dbName
           value: DBNAME
-        - name: db.user
+        - name: db.dbUser
           value: DBUSER
   project: default
   syncPolicy:
