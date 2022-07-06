@@ -22,6 +22,10 @@ spec:
           value: "true"
         - name: ingress.baseDomain
           value: BASE_DOMAIN
+        - name: ingress.tls.enabled
+          value: "true"
+        - name: ingress.tls.issuer
+          value: "letsencrypt-prod-issuer"
   project: default
   syncPolicy:
     automated:
