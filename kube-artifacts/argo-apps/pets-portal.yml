@@ -15,11 +15,11 @@ spec:
     helm:
       parameters:
         - name: replicaCount
-          value: '2'
+          value: "2"
         - name: service.type
           value: ClusterIP
         - name: ingress.enabled
-          value: true
+          value: "true"
         - name: ingress.baseDomain
           value: BASE_DOMAIN
   project: default
