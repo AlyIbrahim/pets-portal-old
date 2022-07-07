@@ -25,7 +25,7 @@ spec:
         - name: ingress.tls.enabled
           value: "true"
         - name: ingress.tls.issuer
-          value: "letsencrypt-prod-issuer"
+          value: ISSUER
   project: default
   syncPolicy:
     automated:
