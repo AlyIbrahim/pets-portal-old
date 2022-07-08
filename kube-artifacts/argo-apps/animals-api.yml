@@ -17,7 +17,7 @@ spec:
         - name: replicaCount
           value: '2'
         - name: db.host
-          value: animals.cy10jvr7k0mv.us-east-1.rds.amazonaws.com
+          value: DBHOST
         - name: db.dbName
           value: DBNAME
         - name: db.dbUser
@@ -29,3 +29,5 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+      - PreserveResourcesOnDeletion=false
+
