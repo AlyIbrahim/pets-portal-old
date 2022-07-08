@@ -17,9 +17,9 @@ spec:
         - name: replicaCount
           value: '2'
         - name: apis[0].name
-          value: animals-api
+          value: animals
         - name: apis[0].url
-          value: ANIMALS_API_URL
+          value: ANIMALS_API_URL:8080
         - name: authorizer.userPoolId
           value: USER_POOL_ID
         - name: authorizer.clientId
