@@ -8,7 +8,7 @@
 	let myAnimals=[];
 
 	async function getAnimals() {
-		const res = await fetch(`/animals`, {
+		const res = await fetch(`/animals/`, {
             mode: 'no-cors'
         });
 		myAnimals = await res.json();
